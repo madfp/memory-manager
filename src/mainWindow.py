@@ -1,6 +1,7 @@
 from PySide6.QtWidgets import QMainWindow, QTabWidget, QStatusBar, QToolBar, QPushButton, QMessageBox
 from PySide6.QtGui import QIcon, QAction
 from PySide6.QtCore import QSize
+from .Tabs import Widget
 class mainWindow(QMainWindow):
     def __init__(self, app):
         super().__init__()
@@ -51,7 +52,7 @@ class mainWindow(QMainWindow):
         toolbar.addWidget(generate)
 
         # Create the tab widget
-        self.tab_widget = QTabWidget(self)
+        self.tab_widget = Widget()
         self.setCentralWidget(self.tab_widget)
 
         # Create the status bar
@@ -68,6 +69,6 @@ class mainWindow(QMainWindow):
         ret = QMessageBox.about(self, "How it works?", 
                                       "This application allows you to manage memory, processes and threads. Monitor memory usage in real time. View, filter and terminate processes, create new ones and master threads.")
 """
-Desarrolle un software que muestre todas las estrategias de manejo de memoria, 
+Desarrolle un software que muestre todas las estrategias de manejo dememoria, 
 indique fragmentación interna y externa, paginación, segmentación.
 """
