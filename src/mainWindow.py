@@ -8,7 +8,7 @@ class mainWindow(QMainWindow):
         # Window properties
         self.setWindowTitle("Task manager")
         self.setWindowIcon(QIcon("./icons/cpu.png"))
-        self.setFixedSize(800, 500)
+        self.setFixedSize(800, 550)
         self.app = app
 
         # Create de menubar
@@ -68,7 +68,3 @@ class mainWindow(QMainWindow):
     def helpWindow(self):
         ret = QMessageBox.about(self, "How it works?", 
                                       "This application allows you to manage memory, processes and threads. Monitor memory usage in real time. View, filter and terminate processes, create new ones and master threads.")
-"""
-Desarrolle un software que muestre todas las estrategias de manejo dememoria, 
-indique fragmentación interna y externa, paginación, segmentación.
-"""
