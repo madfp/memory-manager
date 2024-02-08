@@ -14,16 +14,6 @@ class mainWindow(QMainWindow):
         # Create de menubar
         menubar = self.menuBar()
         
-        """ Window Actions """
-        window = menubar.addMenu("Window")
-        window.addAction("Show")
-        window.addAction("Hide")
-        
-        """ Preferences Actions """
-        preferences = menubar.addMenu("Preferences")
-        preferences.addAction("Visualization")
-        preferences.addAction("Interface")
-        
         """ Settings Actions"""
         settings = menubar.addMenu("Settings")
         # Quit
@@ -35,21 +25,6 @@ class mainWindow(QMainWindow):
         # More information
         more_info = help.addAction("More information")
         more_info.triggered.connect(self.helpWindow)
-
-        # Create de toolbar
-        toolbar = QToolBar("main_toolbar")
-        toolbar.setIconSize(QSize(32,32))
-        self.addToolBar(toolbar)
-        action1 = QAction("Some action", self)
-        action1.setStatusTip("Status message")
-        action1.triggered.connect(self.Action1)
-        toolbar.addAction(action1)
-        
-        """ Funcionalidades extra"""
-        toolbar.addSeparator()
-        generate = QPushButton("Obtener métricas")
-        generate.setStatusTip("Get metrics about the behavior of your system")
-        toolbar.addWidget(generate)
 
         # Create the tab widget
         self.tab_widget = Widget()
