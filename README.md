@@ -11,15 +11,20 @@ Python project to simulate the memory management strategies of an operating syst
 
 When you open the project, you have the "requirements.txt" file, that shows all the libraries used to create the project.
 
-To run it, is recommendable to create a virtual environment and installing the dependencies from the "requirements.txt" file, using:
+To run it, is recommendable to create a virtual environment and installing the dependencies from the "requirements.txt" file.
+
+***
+Create the virtual environment:
 ```
-Create the virtual environment: virtualenv env
+virtualenv env
 ```
+Start the virtual environment:
 ```
-Start the virtual environment: ./env/Scripts/activate
+./env/Scripts/activate
 ```
+Install the dependencies:
 ```
-Install the dependencies: pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 ## License
