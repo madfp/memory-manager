@@ -1,6 +1,5 @@
-from PySide6.QtWidgets import QMainWindow, QTabWidget, QStatusBar, QToolBar, QPushButton, QMessageBox
-from PySide6.QtGui import QIcon, QAction
-from PySide6.QtCore import QSize
+from PySide6.QtWidgets import QMainWindow, QStatusBar, QMessageBox
+from PySide6.QtGui import QIcon
 from .Tabs import Widget
 class mainWindow(QMainWindow):
     def __init__(self, app):
@@ -14,13 +13,13 @@ class mainWindow(QMainWindow):
         # Create de menubar
         menubar = self.menuBar()
         
-        """ Settings Actions"""
+        """ SETTINGS ACTIONS """
         settings = menubar.addMenu("Settings")
         # Quit
         quit = settings.addAction("Quit")
         quit.triggered.connect(self.quitWindow)
         
-        """ Help Actions"""
+        """ HELP ACTIONS """
         help = menubar.addMenu("Help")
         # More information
         more_info = help.addAction("More information")
@@ -33,9 +32,6 @@ class mainWindow(QMainWindow):
         # Create the status bar
         self.setStatusBar(QStatusBar(self))
         # self.statusbar().showmessage("message", timeout-miliseconds)
-    
-    def Action1(self):
-        print("Action1 triggered")
 
     def quitWindow(self):
         self.app.quit()
